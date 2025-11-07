@@ -12,7 +12,7 @@ chat_model = ChatOpenAI()
 
 content = "코딩"
 
-result = chat_model.predict(content + "에 대한 시를 써줘")
+result = chat_model.invoke(content + "에 대한 시를 써줘").content
 print(result)
 
 st.title('인공지능 시인')
@@ -21,4 +21,5 @@ if st.button("시 작성 요청"):
     with st.spinner('Wait for it'):
         result = chat_model.predict(title + "에 대한 시를 써줘")
         st.write(result)
+
 
