@@ -1,4 +1,4 @@
-from langchain.llms import OpenAI
+from langchain_openai import OpenAI
 from langchain_community.chat_models import ChatOpenAI
 import streamlit as st
 
@@ -21,3 +21,4 @@ if st.button("시 작성 요청"):
     with st.spinner('Wait for it'):
         result = chat_model.predict(title + "에 대한 시를 써줘")
         st.write(result)
+
